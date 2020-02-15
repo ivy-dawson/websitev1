@@ -56,8 +56,7 @@ ROOT_URLCONF = 'untitled2.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ["/Users/apple/PycharmProjects/untitled2/untitled2/templates"]
-        ,
+        'DIRS': [os.path.join(BASE_DIR, 'untitled2/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -125,3 +124,5 @@ MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+
+LOGIN_REDIRECT_URL = '/'
