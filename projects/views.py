@@ -1,8 +1,10 @@
 # Create your views here.
 from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
 from projects.models import Project
 
 
+@login_required
 def project_index(request):
     projects = Project.objects.all()
     num_visits = request.session.get('num_visits', 0)

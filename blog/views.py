@@ -1,9 +1,11 @@
 from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 from blog.models import Post, Comment
 from .forms import CommentForm
 
 
+@login_required
 def blog_index(request):
     posts = Post.objects.all().order_by('-created_on')
     context = {
