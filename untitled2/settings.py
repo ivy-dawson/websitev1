@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'test1.apps.Test1Config',
     'projects',
     'blog',
+    'home',
 
 ]
 

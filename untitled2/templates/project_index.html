@@ -1,8 +1,9 @@
 {% extends "base.html" %}
 {% load static %}
 {% block page_content %}
+    <br>
 <h1>Projects</h1>
-    <p>You have visited this page {{ num_visits }} {% if num_visits == 1 %} time{% else %} times{% endif %}.</p>
+    <br>
 <div class="row">
 {% for project in projects %}
     <div class="col-md-4">
@@ -19,5 +20,6 @@
         </div>
     </div>
     {% endfor %}
+<p>You have visited this page {{ num_visits }} {% if num_visits == 1 %} time{% else %} times{% endif %}.</p>
 </div>
 {% endblock %}
